@@ -11,7 +11,7 @@ module.exports = {
         name: 'crafters',
         value: `${crafterString}`,
       })
-      .setImage(imagePath)
+      .setThumbnail(imagePath)
       .setTimestamp();
   },
   createMultipleEmbed: function (isHorde, itemName, matches) {
@@ -22,13 +22,13 @@ module.exports = {
     });
 
     return new MessageEmbed()
-      .setTitle(`Multiple items matched: ${itemName}`)
+      .setTitle(`Multiple matches for: ${itemName}`)
       .addFields({
         name: 'Are you looking for one these?',
         value: `${matchesText}`,
         inline: true,
       })
-      .setImage(imagePath)
+      .setThumbnail(imagePath)
       .setTimestamp();
   },
 };
