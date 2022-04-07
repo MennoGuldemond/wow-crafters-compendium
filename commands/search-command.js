@@ -10,7 +10,7 @@ module.exports = {
   data: new SlashCommandBuilder()
     .setName('search')
     .setDescription('Returns the a list of crafters for a given recipe name')
-    .addStringOption((option) => option.setName('item').setDescription('Enter an item name')).setRequired(true)),
+    .addStringOption((option) => option.setName('item').setDescription('Enter an item name').setRequired(true)),
   async execute(interaction) {
     let factionName;
     if (interaction.channelId === process.env.ALLIANCE_CHANNEL_ID) {
